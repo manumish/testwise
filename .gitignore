@@ -1,0 +1,15 @@
+.DS_Store
+
+# Local source material and generated media
+OneDrive_*/
+Sample Data For Xray Use Case/
+video_draft/
+
+# Deployment backups and local machine artifacts
+deploy/security-backups/
+
+# Common editor/cache output
+.idea/
+.vscode/
+*.log
+*.tmp

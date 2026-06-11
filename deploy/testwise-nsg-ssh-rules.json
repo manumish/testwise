@@ -1,0 +1,44 @@
+[
+  {
+    "description": "SSH from Codex current IP for TestWise deployment",
+    "direction": "INGRESS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "64.79.144.115/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 22,
+        "min": 22
+      }
+    }
+  },
+  {
+    "description": "SSH from Manu home IP",
+    "direction": "INGRESS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 22,
+        "min": 22
+      }
+    }
+  },
+  {
+    "description": "SSH from Manu PC fallback IP",
+    "direction": "INGRESS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "47.229.56.36/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 22,
+        "min": 22
+      }
+    }
+  }
+]

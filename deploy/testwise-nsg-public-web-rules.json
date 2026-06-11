@@ -1,0 +1,30 @@
+[
+  {
+    "description": "Public HTTP for tw.mitra-os.com and ACME renewal",
+    "direction": "INGRESS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 80,
+        "min": 80
+      }
+    }
+  },
+  {
+    "description": "Public HTTPS for tw.mitra-os.com",
+    "direction": "INGRESS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 443,
+        "min": 443
+      }
+    }
+  }
+]

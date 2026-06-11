@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TestWise | Raider Runtime Anemia</title>
+    <link rel="stylesheet" href="styles.css?v=vc-story-3">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">TW</div>
+          <div>
+            <div class="brand-name">TestWise</div>
+            <div class="brand-subtitle">Raider Runtime</div>
+          </div>
+        </div>
+
+        <nav class="nav-tabs" aria-label="Sections">
+          <button class="nav-tab active" type="button" data-view="story">
+            <span class="nav-glyph" aria-hidden="true"></span>
+            Story
+          </button>
+          <button class="nav-tab" type="button" data-view="workup">
+            <span class="nav-glyph" aria-hidden="true"></span>
+            Workup
+          </button>
+          <button class="nav-tab" type="button" data-view="flowchart">
+            <span class="nav-glyph" aria-hidden="true"></span>
+            Flowchart
+          </button>
+          <button class="nav-tab" type="button" data-view="validation">
+            <span class="nav-glyph" aria-hidden="true"></span>
+            Readiness
+          </button>
+          <button class="nav-tab" type="button" data-view="deployment">
+            <span class="nav-glyph" aria-hidden="true"></span>
+            Deployment
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="target-label">Target</div>
+          <div class="target-region">IAD / us-ashburn-1</div>
+          <div class="target-chip">LZ-appdev-cmp</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="pageEyebrow">VC demo story</p>
+            <h1 id="pageTitle">From confusing labs to a clear next step</h1>
+          </div>
+          <div class="topbar-actions" aria-label="Workup actions">
+            <button class="icon-button" type="button" id="refreshButton" title="Reset filters" aria-label="Reset filters">
+              <span aria-hidden="true">R</span>
+            </button>
+            <button class="primary-action" type="button" id="runButton">Run pathway</button>
+          </div>
+        </header>
+
+        <section class="view active" id="view-story" aria-label="Maya story">
+          <div class="story-hero">
+            <div class="story-copy">
+              <p class="eyebrow">Investor demo</p>
+              <h2 id="storyHeadline">Maya's lab portal shows red numbers. TestWise shows the next best step.</h2>
+              <p id="storySubhead"></p>
+              <div class="story-actions">
+                <button class="primary-action" type="button" id="showProofButton">Show clinical proof</button>
+                <button class="secondary-action" type="button" id="showPlatformButton">Show platform scale</button>
+              </div>
+            </div>
+            <div class="story-visual-grid" aria-label="Maya story visuals">
+              <figure class="story-visual large">
+                <img src="assets/story-portal.png" alt="Patient portal lab results illustration">
+                <figcaption>Portal flags values, but not what to do next</figcaption>
+              </figure>
+              <figure class="story-visual">
+                <img src="assets/story-testwise.png" alt="TestWise explanation illustration">
+                <figcaption>TestWise translates the pathway</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="brief-and-proof">
+            <section class="parent-brief" aria-label="Parent readable AI brief">
+              <div class="brief-header">
+                <div>
+                  <p class="eyebrow" id="aiBriefLabel">AI-generated plain-language brief</p>
+                  <h2 id="parentBriefTitle">Maya's Parent Brief</h2>
+                </div>
+                <span class="status-pill ok">Parent-ready</span>
+              </div>
+              <p id="parentBriefText"></p>
+            </section>
+
+            <section class="next-action-card" aria-label="Recommended next action">
+              <p class="eyebrow">Aha moment</p>
+              <h2 id="storyNextAction"></h2>
+              <p id="storyProofPoint"></p>
+              <div class="mini-path" id="miniPath"></div>
+            </section>
+          </div>
+
+          <div class="impact-grid">
+            <section class="impact-card before-card">
+              <div>
+                <p class="eyebrow">Before</p>
+                <h2 id="beforeTitle">Before TestWise</h2>
+                <p id="beforeText"></p>
+              </div>
+              <img src="assets/story-urgent.png" alt="Confusing urgent lab result illustration">
+            </section>
+            <section class="impact-card after-card">
+              <div>
+                <p class="eyebrow">After</p>
+                <h2 id="afterTitle">After TestWise</h2>
+                <p id="afterText"></p>
+              </div>
+              <img src="assets/story-clinician.png" alt="Clinician reviewing pathway illustration">
+            </section>
+          </div>
+
+          <section class="platform-section" id="platformSection" aria-label="TestWise platform packs">
+            <div class="panel-header">
+              <div>
+                <h2>One Engine, Many Clinical Algorithms</h2>
+                <p>VC takeaway: anemia is the demo, the platform is pathway-to-product conversion.</p>
+              </div>
+              <span class="status-pill ok">Platform story</span>
+            </div>
+            <div class="platform-grid" id="platformGrid"></div>
+          </section>
+        </section>
+
+        <div class="clinical-context" id="clinicalContext">
+          <section class="metrics" aria-label="Anemia metrics">
+            <article class="metric">
+              <span class="metric-label">Patient records</span>
+              <strong id="metricCases">0</strong>
+              <span id="metricCasesNote">0 visible</span>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Open actions</span>
+              <strong id="metricFollowup">0</strong>
+              <span>orders or review</span>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Current HGB</span>
+              <strong id="metricAgreement">0%</strong>
+              <span id="metricHgbNote">selected record</span>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Data shield</span>
+              <strong id="metricShield">On</strong>
+              <span>synthetic IDs</span>
+            </article>
+          </section>
+
+          <section class="patient-banner" aria-label="Patient chart header">
+            <div class="patient-avatar" id="patientAvatar" aria-hidden="true">MP</div>
+            <div class="patient-summary">
+              <div class="patient-title-row">
+                <div>
+                  <p class="eyebrow">Patient chart</p>
+                  <h2 id="patientName">Maya Patel</h2>
+                </div>
+                <span class="status-pill ok" id="patientBadge">Synthetic demo patient</span>
+              </div>
+              <div class="patient-grid" id="patientGrid"></div>
+            </div>
+            <div class="clinical-question">
+              <span>Clinical question</span>
+              <p id="clinicalQuestion">Loading patient context</p>
+            </div>
+          </section>
+        </div>
+
+        <section class="view" id="view-workup" aria-label="Anemia workup">
+          <div class="workbench">
+            <section class="panel queue-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Maya's Records</h2>
+                  <p id="queueSummary">Loading patient records</p>
+                </div>
+                <select id="outcomeFilter" aria-label="Filter by outcome">
+                  <option value="all">All outcomes</option>
+                  <option value="Normal">Normal</option>
+                  <option value="Need Iron Studies">Need Iron Studies</option>
+                  <option value="Iron Deficiency Anemia">Iron Deficiency</option>
+                  <option value="Need Reticulocyte Count">Need Reticulocytes</option>
+                  <option value="Inflammation Pattern">Inflammation</option>
+                </select>
+              </div>
+
+              <div class="control-row">
+                <label class="segmented-control" aria-label="Status filter">
+                  <input type="radio" name="statusFilter" value="all" checked>
+                  <span>All</span>
+                </label>
+                <label class="segmented-control">
+                  <input type="radio" name="statusFilter" value="Needs orders">
+                  <span>Open</span>
+                </label>
+                <label class="segmented-control">
+                  <input type="radio" name="statusFilter" value="Reviewed">
+                  <span>Reviewed</span>
+                </label>
+              </div>
+
+              <label class="threshold-control" for="hgbThresholdSlider">
+                <span>Hemoglobin anemia threshold</span>
+                <strong id="thresholdValue">12.0 g/dL</strong>
+                <input id="hgbThresholdSlider" type="range" min="8" max="14" value="12" step="0.1">
+              </label>
+
+              <div class="case-list" id="caseList" aria-label="Filtered Maya records"></div>
+            </section>
+
+            <section class="panel detail-panel">
+              <div class="panel-header">
+                <div>
+                  <h2 id="caseTitle">Select a record</h2>
+                  <p id="caseSubtitle">Synthetic Maya patient record</p>
+                </div>
+                <span class="status-pill" id="caseStatus">Pending</span>
+              </div>
+
+              <div class="record-summary" id="recordSummary"></div>
+
+              <div class="lab-grid" id="labGrid"></div>
+
+              <div class="decision-card">
+                <p class="detail-label">Pathway Result</p>
+                <h2 id="caseOutcome">Awaiting run</h2>
+                <p id="caseInterpretation"></p>
+              </div>
+
+              <div class="pathway" id="pathwayTrace" aria-label="Anemia flowchart path"></div>
+
+              <div class="orders-panel" id="orderPanel"></div>
+
+              <div class="review-controls">
+                <label class="toggle-row">
+                  <input id="shieldToggle" type="checkbox" checked>
+                  <span>Data shield</span>
+                </label>
+                <label class="toggle-row">
+                  <input id="explainToggle" type="checkbox" checked>
+                  <span>Show recommendations</span>
+                </label>
+                <button class="secondary-action" type="button" id="markValidatedButton">Mark reviewed</button>
+              </div>
+
+              <div class="rationale" id="recommendationPanel">
+                <h3>Recommended Next Step</h3>
+                <p id="caseRecommendation"></p>
+              </div>
+
+              <div class="audit-log" id="auditLog"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-flowchart" aria-label="Flowchart reference">
+          <div class="two-column flowchart-layout">
+            <section class="panel chart-panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Anemia Flowchart Reference</h2>
+                  <p>Expert pathway powering Maya's staged anemia workup</p>
+                </div>
+                <select id="chartSelect" aria-label="Select flowchart view">
+                  <option value="assets/anemia-flowchart-full.png">Full pathway</option>
+                  <option value="assets/anemia-cutout-01.png">Initial CBC and MCV</option>
+                  <option value="assets/anemia-cutout-02.png">Microcytic branch</option>
+                  <option value="assets/anemia-cutout-08.png">Hemolysis branch</option>
+                  <option value="assets/anemia-cutout-14.png">Acquired causes</option>
+                </select>
+              </div>
+              <div class="chart-viewer">
+                <img id="flowchartImage" src="assets/anemia-flowchart-full.png" alt="Anemia diagnostic flowchart">
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Flow Segments</h2>
+                  <p>How this demo uses the chart</p>
+                </div>
+              </div>
+              <div class="gate-list" id="flowSegmentList"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-validation" aria-label="Validation summary">
+          <div class="two-column">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Demo Readiness</h2>
+                  <p>Maya's chart is staged, traceable, and clinician-reviewable</p>
+                </div>
+                <span class="status-pill ok">Sanitized</span>
+              </div>
+              <div class="coverage-list" id="coverageList"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Patient Record Controls</h2>
+                  <p>How the demo keeps the chart realistic without real PHI</p>
+                </div>
+              </div>
+              <div class="identity-grid" id="identityGrid"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-deployment" aria-label="Deployment target">
+          <div class="two-column">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Cloud Target</h2>
+                  <p>IAD regional app placement</p>
+                </div>
+                <span class="status-pill ok">Ready</span>
+              </div>
+              <dl class="target-list" id="targetList"></dl>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2>Release Gates</h2>
+                  <p>Current build checks</p>
+                </div>
+              </div>
+              <div class="gate-list" id="gateList"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="data.js?v=vc-story-3"></script>
+    <script src="main.js?v=vc-story-3"></script>
+  </body>
+</html>

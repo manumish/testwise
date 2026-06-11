@@ -1,0 +1,10 @@
+[
+  {
+    "description": "Outbound internet egress for TestWise package updates and HTTPS responses",
+    "destination": "0.0.0.0/0",
+    "destinationType": "CIDR_BLOCK",
+    "direction": "EGRESS",
+    "isStateless": false,
+    "protocol": "all"
+  }
+]

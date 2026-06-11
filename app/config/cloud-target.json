@@ -1,0 +1,23 @@
+{
+  "company": "Raider Runtime",
+  "app": "TestWise",
+  "region": "us-ashburn-1",
+  "regionCode": "iad",
+  "compartment": {
+    "name": "LZ-appdev-cmp",
+    "id": "ocid1.compartment.oc1..aaaaaaaak5tliaqm7cveh3lzkkrbwkmaeiznf7bdfh3fxgnsz6igrg7c3lra"
+  },
+  "subnet": {
+    "name": "LZ-0-web-subnet",
+    "id": "ocid1.subnet.oc1.iad.aaaaaaaaadb3dstet7yffqs44n4bzp2ytx3e44seakj3yrugliyr7xi6k6cq",
+    "vcn": "LZ-0-vcn",
+    "cidr": "10.0.0.0/24",
+    "publicIpAllowed": true
+  },
+  "dataPolicy": {
+    "customerLabel": "Raider Runtime",
+    "caseIds": "synthetic",
+    "personalNames": "redacted",
+    "sourceFilenames": "not displayed"
+  }
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "description": "HTTP",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 80,
+        "min": 80
+      }
+    }
+  },
+  {
+    "description": "HTTPS",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 443,
+        "min": 443
+      }
+    }
+  },
+  {
+    "description": "Flask App",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 5000,
+        "min": 5000
+      }
+    }
+  },
+  {
+    "description": "Flask App",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 5001,
+        "min": 5001
+      }
+    }
+  },
+  {
+    "description": "Flask app",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 5003,
+        "min": 5003
+      }
+    }
+  },
+  {
+    "description": "Manu pc",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "47.229.56.36/32",
+    "sourceType": "CIDR_BLOCK"
+  },
+  {
+    "isStateless": false,
+    "protocol": "17",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "udpOptions": {
+      "destinationPortRange": {
+        "max": 51820,
+        "min": 51820
+      }
+    }
+  },
+  {
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 22,
+        "min": 22
+      }
+    }
+  },
+  {
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 3000,
+        "min": 3000
+      }
+    }
+  },
+  {
+    "isStateless": false,
+    "protocol": "6",
+    "source": "137.25.226.158/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 8000,
+        "min": 8000
+      }
+    }
+  },
+  {
+    "description": "SSH from Codex current IP for testwise deployment",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "64.79.144.115/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 22,
+        "min": 22
+      }
+    }
+  },
+  {
+    "description": "HTTP from Codex current IP for testwise demo verification",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "64.79.144.115/32",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 80,
+        "min": 80
+      }
+    }
+  },
+  {
+    "description": "Public HTTP for tw.mitra-os.com and ACME renewal",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 80,
+        "min": 80
+      }
+    }
+  },
+  {
+    "description": "Public HTTPS for tw.mitra-os.com",
+    "isStateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "sourceType": "CIDR_BLOCK",
+    "tcpOptions": {
+      "destinationPortRange": {
+        "max": 443,
+        "min": 443
+      }
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "compartmentId": "ocid1.compartment.oc1..aaaaaaaak5tliaqm7cveh3lzkkrbwkmaeiznf7bdfh3fxgnsz6igrg7c3lra",
+  "displayName": "testwise-network-repair",
+  "target": {
+    "instanceId": "ocid1.instance.oc1.iad.anuwcljsts3kouacjzcvhuen6rv4lu6ix3qowwyc6ry63g35t5336pzvgcba"
+  },
+  "timeoutInSeconds": "300",
+  "content": {
+    "source": {
+      "sourceType": "TEXT",
+      "text": "#!/bin/bash\nset -euxo pipefail\n\nsystemctl restart firewalld || true\nfirewall-cmd --permanent --add-service=ssh || true\nfirewall-cmd --permanent --add-service=http || true\nfirewall-cmd --permanent --add-service=https || true\nfirewall-cmd --reload || true\nsystemctl restart sshd || true\nsystemctl restart nginx || true\n\nhostname\nip -4 addr show || true\nip route || true\nfirewall-cmd --list-all || true\nss -ltnp || true\ncurl -I --max-time 5 http://127.0.0.1 || true\nsystemctl is-active sshd firewalld nginx || true\n",
+      "textSha256": "fc4089478c27d1b73b66a8e7793fdf65ce675771c349b7c28149646804b8419a"
+    },
+    "output": {
+      "outputType": "TEXT"
+    }
+  }
+}
